@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { sections, projects, skillGroups, nextSection, resolveRoute } from './data.js';
 import './styles.css';
-import { useMenuSound } from './useMenuSound.js';
 
 const asset = name => `${import.meta.env.BASE_URL}portraits/${name}`;
 
@@ -110,7 +109,6 @@ function Home({ onNavigate }) {
 }
 
 function App() {
-  const sound = useMenuSound();
   const [route, setRoute] = useState(() => resolveRoute(window.location.hash));
   const [motion, setMotion] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const contentRef = useRef();
@@ -138,9 +136,9 @@ function App() {
   }, [route]);
   function navigate(id) { shouldFocus.current = id !== 'home'; }
 
-  return <div onClickCapture={sound.onMenuClick} className={`app ${home ? 'is-home' : 'is-detail'} ${motion ? '' : 'reduce-motion'} scene-${route}`}>
+  return <div className={`app ${home ? 'is-home' : 'is-detail'} ${motion ? '' : 'reduce-motion'} scene-${route}`}>
     <a className="skip-link" href="#content" onClick={event => { event.preventDefault(); document.getElementById('content')?.focus(); }}>Skip to content</a><div className="halftone" aria-hidden="true" />
-    <header><a className="wordmark" href="#/home" aria-label="Pedro Ramon — home">PEDRO<span>/</span>RAMON</a><p>PORTFOLIO <span>/</span> FRONT-END ENGINEER</p><div className="header-controls"><button className="sound-button" onClick={sound.toggle} aria-pressed={sound.enabled} aria-label={sound.enabled ? 'Turn menu sounds off' : 'Turn menu sounds on'}>SOUND <b>{sound.enabled ? 'ON' : 'OFF'}</b></button><button className="motion-button" onClick={() => setMotion(value => !value)} aria-pressed={motion}>MOTION <b>{motion ? 'ON' : 'OFF'}</b></button></div></header>
+    <header><a className="wordmark" href="#/home" aria-label="Pedro Ramon — home">PEDRO<span>/</span>RAMON</a><p>PORTFOLIO <span>/</span> FRONT-END ENGINEER</p><button className="motion-button" onClick={() => setMotion(value => !value)} aria-pressed={motion}>MOTION <b>{motion ? 'ON' : 'OFF'}</b></button></header>
     {home ? <Home onNavigate={navigate} /> : <main className="detail-scene" key={route}>
       <aside className="scene-identity"><a className="back-link" href="#/home">← BACK TO MENU</a><div className="scene-portrait"><span className="scene-word" aria-hidden="true">{section.label}</span><img src={asset(section.portrait)} alt={section.alt} /><span className="scene-counter">{section.number}<small>/ 05</small></span></div><Menu compact route={route} onNavigate={navigate} /></aside>
       <section className="content-shell" ref={contentRef} id="content" tabIndex={-1} aria-labelledby="scene-heading"><div className="page-content"><div className="section-kicker"><span>{section.number} / 05</span><h2 ref={headingRef} tabIndex={-1} id="scene-heading">{section.caption}</h2></div><Page /></div></section>
