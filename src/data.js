@@ -1,6 +1,6 @@
 export const sections = [
   { id: 'profile', label: 'PROFILE', caption: 'WHO I AM', number: '01', portrait: 'positive.webp', alt: 'Pedro smiling and giving a thumbs-up' },
-  { id: 'projects', label: 'MISSIONS', caption: 'SELECTED WORK', number: '02', portrait: 'presentation.webp', alt: 'Pedro gesturing toward his selected work' },
+  { id: 'projects', label: 'MISSIONS', caption: 'SELECTED WORK', number: '02', portrait: 'missions-thinking.webp', alt: 'Pedro in a thoughtful pose with his hand on his chin' },
   { id: 'skills', label: 'ARSENAL', caption: 'SKILLS & TOOLS', number: '03', portrait: 'arms-crossed.webp', alt: 'Pedro with his arms crossed' },
   { id: 'journey', label: 'JOURNEY', caption: 'EXPERIENCE', number: '04', portrait: 'pointing-up.webp', alt: 'Pedro looking and pointing upward' },
   { id: 'contact', label: 'CONTACT', caption: 'LET’S CONNECT', number: '05', portrait: 'invitation.webp', alt: 'Pedro smiling with a welcoming gesture' },
