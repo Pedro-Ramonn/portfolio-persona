@@ -23,10 +23,16 @@ npm run build
 
 Com o foco no menu, use as setas, Home e End para navegar. URLs com hash abrem seções diretamente. Fontes Barlow são carregadas do Google Fonts, com fallback local.
 
-## Validação e revisão
+## Publicação
 
-Os dois testes de navegação e dados passaram localmente com `node --preserve-symlinks-main --preserve-symlinks src/data.test.js`. A instalação npm foi bloqueada pela rede do ambiente de desenvolvimento; build e revisão visual em desktop/celular permanecem pendentes. O workflow executa testes e build no GitHub.
+Site: https://pedro-ramonn.github.io/portfolio-persona/
 
-A implementação está na branch `feat/portfolio`, para revisão por PR antes de integrar à `main`. Os documentos pessoais originais não estão no repositório.
+GitHub Pages deve usar GitHub Actions como fonte. O workflow de publicação executa testes e build, depois publica dist automaticamente a cada alteração integrada à main. Também pode ser executado manualmente na aba Actions.
+
+A configuração base do Vite e o caminho do retrato respeitam o subdiretório /portfolio-persona/. A navegação usa hash, sem exigir redirecionamentos do servidor.
+
+## Validação
+
+Testes e build da implementação inicial passaram no GitHub Actions. Revisão visual em desktop/celular permanece pendente. Os documentos pessoais originais não estão no repositório.
 
 Depois da aprovação final, a explicação de React será feita passo a passo usando o código deste projeto.
