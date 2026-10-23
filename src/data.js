@@ -14,12 +14,11 @@ export const projects = [
 
 export const skillGroups = [
   { name: 'FRONT-END', items: ['Angular 8 → 20', 'TypeScript', 'JavaScript', 'HTML & CSS'] },
-  { name: 'ARCHITECTURE', items: ['Micro-frontends', 'Legacy modernization', 'Scalable interfaces'] },
-  { name: 'DELIVERY', items: ['Git & GitHub Actions', 'CI/CD', 'Jest', 'Node.js', 'AI-assisted development'] },
+  { name: 'ARCHITECTURE', items: ['Micro-frontends', 'Legacy modernization', 'Scalable interfaces', 'Cross-team collaboration'] },
+  { name: 'DELIVERY', items: ['Git & GitHub Actions', 'CI/CD', 'Jest', 'Node.js', 'AI-assisted development', 'Production troubleshooting'] },
 ];
 export function nextSection(index, direction) { return (index + direction + sections.length) % sections.length; }
 export function resolveRoute(hash) {
   const id = hash.replace(/^#\/?/, '');
   return sections.some(section => section.id === id) ? id : 'home';
 }
-
