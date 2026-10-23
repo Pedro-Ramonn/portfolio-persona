@@ -1,38 +1,44 @@
-# Pedro Ramon — Portfólio
+# Pedro Ramon — Portfolio
 
-Portfólio em React + Vite inspirado nos menus de Persona 5, com retrato personalizado, navegação por teclado, cinco seções e suporte a movimento reduzido.
+A React + Vite portfolio inspired by expressive RPG menus. Red, black and white, photographic cutouts and animated transitions give each section its own scene.
 
-## Executar
+## Development
 
-Requer Node.js 20.19+ e npm.
+Requires Node.js 20.19+ and npm.
 
 ```sh
 npm install
 npm run dev
 npm test
 npm run build
+npm run preview
 ```
 
-## Estrutura
+## Experience
 
-- `src/main.jsx`: componentes, estado, navegação e interações.
-- `src/data.js`: conteúdo profissional baseado no currículo e na cover letter fornecidos.
-- `src/styles.css`: composição visual, responsividade e animações.
-- `public/pedro.png`: retrato estilizado.
-- `.github/workflows/checks.yml`: testes e build dos pull requests.
+The home scene introduces Pedro with his name, portrait and section menu. Each menu link opens a dedicated screen with its own photograph and content panel. The original photos supplied by Pedro are the references for the cutouts, poses and tattoos.
 
-Com o foco no menu, use as setas, Home e End para navegar. URLs com hash abrem seções diretamente. Fontes Barlow são carregadas do Google Fonts, com fallback local.
+- Profile: introduction and professional focus.
+- Missions: selected professional case studies.
+- Arsenal: tools, architecture and delivery skills.
+- Journey: experience and education.
+- Contact: email, LinkedIn and GitHub.
 
-## Publicação
+Navigation uses hash routes, including direct links and browser Back/Forward. Arrow keys move focus within the menu; Enter opens a section. Escape and Back to menu return home. Motion can be disabled and respects the system reduced-motion preference. All interface text, metadata and accessibility labels are in English.
 
-Site: https://pedro-ramonn.github.io/portfolio-persona/
+## Files
 
-GitHub Pages deve usar GitHub Actions como fonte. O workflow de publicação executa testes e build, depois publica dist automaticamente a cada alteração integrada à main. Também pode ser executado manualmente na aba Actions.
+- src/main.jsx: React components, routing and interactions.
+- src/data.js: professional content, route resolution and portrait mapping.
+- src/styles.css: home and section scenes, responsive layout and motion.
+- public/portraits/: optimized transparent portrait assets.
+- vite.config.js: GitHub Pages base path.
 
-A configuração base do Vite e o caminho do retrato respeitam o subdiretório /portfolio-persona/. A navegação usa hash, sem exigir redirecionamentos do servidor.
+The content is based on the supplied resume and cover letter. Corporate source code and internal screens are not included. Original personal documents and unedited reference photos are not committed. Barlow fonts load from Google Fonts with local fallbacks.
 
-## Validação
+## Deployment
 
-Testes e build da implementação inicial passaram no GitHub Actions. Revisão visual em desktop/celular permanece pendente. Os documentos pessoais originais não estão no repositório.
+https://pedro-ramonn.github.io/portfolio-persona/
 
-Depois da aprovação final, a explicação de React será feita passo a passo usando o código deste projeto.
+The Pages workflow runs tests and builds the app before deploying changes merged into main. All development changes are proposed through pull requests for Pedro to review.
+
