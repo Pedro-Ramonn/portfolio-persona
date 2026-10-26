@@ -101,7 +101,7 @@ function Home({ onNavigate }) {
   return <main className="home-scene" id="content" tabIndex={-1}>
     <div className="home-backdrop" aria-hidden="true"><span>BUILD.</span><span>EVOLVE.</span></div>
     <div className="home-portrait"><img src={asset('presentation.webp')} alt="Pedro Ramon wearing a black T-shirt, with his left-arm tattoos visible" fetchPriority="high" /><span className="portrait-caption">ENGINEERING WITH PERSONALITY</span></div>
-    <div className="home-title"><p className="eyebrow">SOFTWARE ENGINEER / ANGULAR SPECIALIST</p><h1>PEDRO<br /><em>RAMON.</em></h1><p>Complex challenges.<br />Thoughtful interfaces.</p></div>
+    <div className="home-title"><p className="eyebrow">SOFTWARE ENGINEER / ANGULAR SPECIALIST</p><h1>PEDRO<br /><em>RAMON.</em></h1></div>
     <Menu route="home" onNavigate={onNavigate} />
     <p className="home-location">BASED IN BRAZIL <span>/</span> OPEN TO THE WORLD</p>
   </main>;
@@ -141,9 +141,9 @@ function App() {
     {home ? <Home onNavigate={navigate} /> : <main className="detail-scene" key={route}>
       <aside className="scene-identity"><a className="back-link" href="#/home">← BACK TO MENU</a><div className="scene-portrait"><span className="scene-word" aria-hidden="true">{section.label}</span><img src={asset(section.portrait)} alt={section.alt} /><span className="scene-counter">{section.number}<small>/ 05</small></span></div><Menu compact route={route} onNavigate={navigate} /></aside>
       <section className="content-shell" ref={contentRef} id="content" tabIndex={-1} aria-labelledby="scene-heading"><div className="page-content"><div className="section-kicker"><span>{section.number} / 05</span><h2 ref={headingRef} tabIndex={-1} id="scene-heading">{section.caption}</h2></div><Page /></div></section>
-      <span className="edge-label" aria-hidden="true">TAKE YOUR NEXT STEP /</span>
+      <span className="edge-label" aria-hidden="true">TAKE YOUR TIME /</span>
     </main>}
-    <footer><span>BUILT WITH REACT <b>/</b> MADE TO MOVE FORWARD</span></footer>
+    <footer><span>BUILT WITH REACT</span></footer>
   </div>;
 }
 
