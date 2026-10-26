@@ -10,14 +10,13 @@ function Profile() {
     <p className="eyebrow">SÃO PAULO, BRAZIL / FRONT-END ENGINEER</p>
     <h1>BREAK THE<br />LEGACY.<br /><em>BUILD THE NEXT.</em></h1>
     <p className="intro">I’m <strong>Pedro Ramon.</strong> I turn complex applications into experiences that make sense.</p>
-    <p className="body-copy">Software engineer with 3+ years of experience in the financial industry. I specialize in Angular, TypeScript and front-end architecture that grows with the product.</p>
-    <div className="stats"><div><strong>3+</strong><span>YEARS OF EXPERIENCE</span></div><div><strong>10+</strong><span>MICRO-FRONTENDS DELIVERED</span></div><div><strong>8 → 20</strong><span>ANGULAR MODERNIZATION</span></div></div>
+    <p className="body-copy">Software engineer with 4+ years of experience in the financial industry. I specialize in Angular, TypeScript and front-end architecture that grows with the product.</p>
+    <div className="stats"><div><strong>4+</strong><span>YEARS OF EXPERIENCE</span></div><div><strong>10+</strong><span>MICRO-FRONTENDS DELIVERED</span></div><div><strong>8 → 20</strong><span>ANGULAR MODERNIZATION</span></div></div>
     <div className="profile-story">
       <section><h2>BUILDING WHERE RELIABILITY MATTERS</h2><p>My experience comes from the financial industry, where customer journeys, complex business rules and reliable delivery need to work together. At F1RST Digital Services, I build and modernize investment experiences in the Santander ecosystem.</p></section>
       <section><h2>OWNERSHIP, FROM CODE TO PRODUCTION</h2><p>I work beyond individual features: from understanding requirements and shaping interfaces to automated testing, CI/CD pipelines and production releases. I enjoy collaborating across disciplines and making complex systems easier to maintain.</p></section>
-      <section><h2>WHAT I WANT TO BUILD NEXT</h2><p>I’m looking for a team that values engineering quality, ownership and continuous improvement. I bring hands-on modernization experience, curiosity and a practical approach to turning technical challenges into useful products.</p></section>
+      <section><h2>WHAT DRIVES MY WORK</h2><p>Engineering quality, ownership and continuous improvement guide how I work. I enjoy modernizing complex applications, exploring better development practices and turning technical challenges into useful products that evolve with the business.</p></section>
     </div>
-    <p className="availability"><span /> Open to international remote opportunities</p>
   </>;
 }
 
@@ -39,7 +38,7 @@ function Skills() {
     <h1>MY<br /><em>ARSENAL.</em></h1>
     <p className="body-copy">From interface to deployment. The tools I use to build, modernize and ship applications.</p>
     <div className="skill-groups">{skillGroups.map((group, index) => <section key={group.name}><div className="group-heading"><span>0{index + 1}</span><h2>{group.name}</h2></div><div className="tags">{group.items.map(item => <span key={item}>{item}</span>)}</div></section>)}</div>
-    <p className="languages"><strong>PORTUGUESE</strong> Native <span>/</span> <strong>ENGLISH</strong> Full professional proficiency</p>
+    <p className="languages"><strong>PORTUGUESE</strong> Native <span>/</span> <strong>ENGLISH</strong> Full professional proficiency <span>/</span> <strong>SPANISH</strong> Full professional proficiency</p>
     <p className="note">Built with React. My professional specialization is Angular. I also bring hands-on experience with automated testing, release pipelines and production troubleshooting.</p>
   </>;
 }
@@ -73,8 +72,8 @@ function Contact() {
   return <>
     <p className="eyebrow">NEXT MISSION / LET’S TALK</p>
     <h1>GOOD IDEAS<br />DESERVE<br /><em>A BEGINNING.</em></h1>
-    <p className="intro">Looking for someone to move your front-end forward?</p>
-    <p className="body-copy">Based in Brazil and open to international remote opportunities. Let’s talk about engineering, products and the next challenge.</p>
+    <p className="intro">Great conversations start with shared ideas.</p>
+    <p className="body-copy">Based in Brazil. Let’s connect to exchange ideas about engineering, products and building meaningful digital experiences.</p>
     <div className="contact-links"><a className="primary-link" href="mailto:pedrorcdiaz5@gmail.com">SEND EMAIL <span>↗</span></a><a href="https://www.linkedin.com/in/pedro-ramon-coser-diaz/" target="_blank" rel="noreferrer">LINKEDIN <span>↗</span></a><a href="https://github.com/Pedro-Ramonn" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a></div>
     <div className="email-copy"><span>pedrorcdiaz5@gmail.com</span><button onClick={copyEmail}>{status === 'Email copied.' ? 'COPIED' : 'COPY'}</button></div>
     <p role="status" className="note">{status || 'English, Spanish or Portuguese. Let’s connect.'}</p>
